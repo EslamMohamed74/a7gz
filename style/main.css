@@ -1,0 +1,181 @@
+/* Start Homepage Intro  */
+#intro {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/background.jpg) top center;
+    background-size: cover;
+    overflow: auto;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+#intro .intro-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 25%;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 15% 0 15%;
+}
+
+/* Start Header  */
+header {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* EndHeader */
+
+/* Start Navbar  */
+.navbar {
+    background-color: transparent !important;
+    padding-left: 0px !important;
+}
+.navbar-collapse {
+    border-bottom: 1px solid !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar .nav-item a {
+    color: rgba(255, 255, 255, 0.5) !important;
+    padding-left: 0px !important;
+}
+.navbar .active a {
+    color: rgba(255, 255, 255, 1) !important;
+    border-bottom: 3px solid !important;
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-nav li a:hover:not(.active) {
+    color: rgba(255, 255, 255, 1) !important;
+    border-bottom: 3px solid !important;
+    border-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* End Navbar  */
+
+/* Start RadioButton */
+.form-check-inline {
+    color: rgba(255, 255, 255, 0.5) !important;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form-check-inline input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.form-check-label {
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 3;
+    left: 1;
+    height: 13px;
+    width: 13px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+.form-check-inline:hover input ~ .checkmark {
+    background-color: #ffa500;
+}
+
+.form-check-inline:hover input ~ .form-check-label {
+    color: rgba(255, 255, 255, 1);
+}
+
+.form-check-inline input:checked ~ .checkmark {
+    background-color: #ffa500;
+}
+
+.form-check-inline input:checked ~ .form-check-label {
+    color: rgba(255, 255, 255, 1);
+}
+
+/* End Readio Button  */
+
+/* Start form Input Group  */
+.input-group-text {
+    background-color: white;
+    border-color: #ced4da;
+    border-right: 0px;
+    border-radius: 0px;
+    height: 55px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+.form-control {
+    border-left: 0px;
+    border-radius: 0px;
+    height: 55px;
+}
+.inputCol {
+    padding: 0.5px !important;
+}
+
+/* Start Auto Complete  */
+.input-group {
+    position: relative;
+}
+
+.autocomplete-items {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+    word-wrap: break-word;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+/* End Auto Complete */
+
+/* End form Input Group  */
+
+#searchBtn {
+    background-color: orange;
+    color: white;
+    height: 55px;
+}
+
+/* End Homepage Intro  */
