@@ -104,14 +104,19 @@ $('document').ready(() => {
 
 
     const searchCountry = (input, searchText) => {
-        let url = `https://booking-engine.fare33.com/api/airport/autocomplete?term=${searchText}`;
         let suggestions = [];
-        fetch(url)
-            .then(resp => resp.json())
+        fetch(`https://tripadvisor1.p.rapidapi.com/airports/search?query=${searchText}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+                "x-rapidapi-key": "4833256de4msh821bf8fed67c3c1p1f7df4jsn04f9c41a9d82"
+            }
+        })
+        .then(resp => resp.json())
             .then(data => {
                 data.map((element) => {
 
-                    suggestions.push(`${element.Name},${element.City},${element.Country}`)
+                    suggestions.push(element.display_name)
                 })
                 autocomplete(input, suggestions)
             })
